@@ -1,0 +1,5 @@
+Module                  Size  Used by
+iptable_nat            16384  1
+nf_nat_ipv4            16384  1 iptable_nat
+nf_nat                 28672  1 nf_nat_ipv4
+efivarfs               16384  1

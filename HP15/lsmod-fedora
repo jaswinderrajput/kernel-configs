@@ -1,0 +1,153 @@
+Module                  Size  Used by
+rfcomm                 77824  2
+fuse                  102400  3
+xt_CHECKSUM            16384  1
+ipt_MASQUERADE         16384  3
+nf_nat_masquerade_ipv4    16384  1 ipt_MASQUERADE
+tun                    32768  1
+nf_conntrack_netbios_ns    16384  1
+nf_conntrack_broadcast    16384  1 nf_conntrack_netbios_ns
+xt_CT                  16384  1
+ip6t_rpfilter          16384  1
+ip6t_REJECT            16384  2
+nf_reject_ipv6         16384  1 ip6t_REJECT
+xt_conntrack           16384  22
+ccm                    20480  6
+ip_set                 36864  0
+nfnetlink              16384  1 ip_set
+ebtable_broute         16384  1
+bridge                143360  1 ebtable_broute
+ebtable_nat            16384  1
+ip6table_raw           16384  1
+ip6table_security      16384  1
+ip6table_nat           16384  1
+nf_conntrack_ipv6      20480  12
+nf_defrag_ipv6         36864  1 nf_conntrack_ipv6
+nf_nat_ipv6            16384  1 ip6table_nat
+ip6table_mangle        16384  1
+iptable_raw            16384  1
+iptable_security       16384  1
+iptable_nat            16384  1
+nf_conntrack_ipv4      16384  16
+nf_defrag_ipv4         16384  1 nf_conntrack_ipv4
+nf_nat_ipv4            16384  1 iptable_nat
+nf_nat                 28672  3 nf_nat_ipv6,nf_nat_masquerade_ipv4,nf_nat_ipv4
+nf_conntrack          131072  11 nf_conntrack_ipv6,nf_conntrack_ipv4,ipt_MASQUERADE,nf_conntrack_broadcast,nf_conntrack_netbios_ns,xt_CT,nf_nat_ipv6,nf_nat_masquerade_ipv4,xt_conntrack,nf_nat_ipv4,nf_nat
+libcrc32c              16384  2 nf_conntrack,nf_nat
+iptable_mangle         16384  1
+ebtable_filter         16384  1
+ebtables               32768  3 ebtable_filter,ebtable_nat,ebtable_broute
+ip6table_filter        16384  1
+ip6_tables             28672  5 ip6table_mangle,ip6table_filter,ip6table_security,ip6table_raw,ip6table_nat
+cmac                   16384  1
+bnep                   20480  2
+vfat                   20480  2
+fat                    69632  1 vfat
+snd_hda_codec_hdmi     49152  1
+snd_hda_codec_realtek    90112  1
+snd_hda_codec_generic    73728  1 snd_hda_codec_realtek
+snd_hda_intel          40960  9
+uvcvideo               90112  0
+hp_wmi                 16384  0
+videobuf2_vmalloc      16384  1 uvcvideo
+videobuf2_memops       16384  1 videobuf2_vmalloc
+iTCO_wdt               16384  0
+videobuf2_v4l2         24576  1 uvcvideo
+iTCO_vendor_support    16384  1 iTCO_wdt
+videobuf2_core         40960  2 uvcvideo,videobuf2_v4l2
+videodev              172032  3 uvcvideo,videobuf2_core,videobuf2_v4l2
+media                  40960  2 uvcvideo,videodev
+arc4                   16384  2
+snd_hda_codec         126976  4 snd_hda_intel,snd_hda_codec_hdmi,snd_hda_codec_generic,snd_hda_codec_realtek
+rtl8723be              90112  0
+snd_hda_core           81920  5 snd_hda_intel,snd_hda_codec,snd_hda_codec_hdmi,snd_hda_codec_generic,snd_hda_codec_realtek
+rtsx_pci_ms            20480  0
+memstick               16384  1 rtsx_pci_ms
+btcoexist             114688  1 rtl8723be
+btusb                  45056  0
+rtl8723_common         24576  1 rtl8723be
+rtl_pci                32768  1 rtl8723be
+intel_rapl             20480  0
+btrtl                  16384  1 btusb
+rtlwifi                77824  3 rtl_pci,rtl8723_common,rtl8723be
+mac80211              761856  3 rtl_pci,rtlwifi,rtl8723be
+intel_soc_dts_iosf     16384  0
+intel_powerclamp       16384  0
+coretemp               16384  0
+snd_intel_sst_acpi     16384  0
+cfg80211              598016  2 mac80211,rtlwifi
+snd_intel_sst_core     77824  1 snd_intel_sst_acpi
+snd_soc_sst_atom_hifi2_platform   102400  1 snd_intel_sst_core
+kvm                   598016  0
+snd_soc_sst_match      16384  1 snd_intel_sst_acpi
+snd_soc_core          229376  1 snd_soc_sst_atom_hifi2_platform
+irqbypass              16384  1 kvm
+crct10dif_pclmul       16384  0
+snd_compress           20480  1 snd_soc_core
+snd_pcm_dmaengine      16384  1 snd_soc_core
+crc32_pclmul           16384  0
+ghash_clmulni_intel    16384  0
+intel_cstate           20480  0
+ac97_bus               16384  1 snd_soc_core
+snd_hwdep              16384  1 snd_hda_codec
+snd_seq                65536  0
+joydev                 20480  0
+snd_seq_device         16384  1 snd_seq
+hci_uart              102400  0
+snd_pcm               102400  8 snd_hda_intel,snd_hda_codec,snd_pcm_dmaengine,snd_hda_core,snd_soc_sst_atom_hifi2_platform,snd_hda_codec_hdmi,snd_soc_core
+wmi                    20480  1 hp_wmi
+intel_vbtn             16384  0
+i2c_designware_platform    16384  0
+sparse_keymap          16384  2 intel_vbtn,hp_wmi
+hp_accel               28672  0
+lis3lv02d              20480  1 hp_accel
+input_polldev          16384  1 lis3lv02d
+btbcm                  16384  2 hci_uart,btusb
+btqca                  16384  1 hci_uart
+dw_dmac                16384  0
+btintel                16384  2 hci_uart,btusb
+snd_timer              32768  2 snd_seq,snd_pcm
+bluetooth             528384  33 btrtl,hci_uart,btintel,btqca,bnep,btbcm,rfcomm,btusb
+mei_txe                20480  0
+snd                    77824  30 snd_compress,snd_hda_intel,snd_hwdep,snd_seq,snd_hda_codec,snd_timer,snd_soc_sst_atom_hifi2_platform,snd_hda_codec_hdmi,snd_hda_codec_generic,snd_seq_device,snd_hda_codec_realtek,snd_soc_core,snd_pcm
+shpchp                 36864  0
+lpc_ich                24576  0
+rfkill_gpio            16384  0
+pwm_lpss_platform      16384  0
+mei                   102400  1 mei_txe
+i2c_designware_core    20480  1 i2c_designware_platform
+i2c_i801               24576  0
+soundcore              16384  1 snd
+spi_pxa2xx_platform    24576  0
+rfkill                 28672  8 rfkill_gpio,bluetooth,hp_wmi,cfg80211
+pwm_lpss               16384  1 pwm_lpss_platform
+hp_wireless            16384  0
+tpm_tis                16384  0
+tpm_tis_core           20480  1 tpm_tis
+tpm                    49152  2 tpm_tis,tpm_tis_core
+nfsd                  339968  1
+auth_rpcgss            61440  1 nfsd
+nfs_acl                16384  1 nfsd
+lockd                  90112  1 nfsd
+grace                  16384  2 nfsd,lockd
+sunrpc                335872  7 auth_rpcgss,nfsd,nfs_acl,lockd
+i915                 1490944  0
+rtsx_pci_sdmmc         24576  0
+i2c_algo_bit           16384  1 i915
+crc32c_intel           24576  1
+drm_kms_helper        151552  1 i915
+8021q                  32768  0
+garp                   16384  1 8021q
+drm                   348160  2 i915,drm_kms_helper
+stp                    16384  2 garp,bridge
+llc                    16384  3 garp,bridge,stp
+mrp                    20480  1 8021q
+serio_raw              16384  0
+r8169                  81920  0
+rtsx_pci               57344  2 rtsx_pci_sdmmc,rtsx_pci_ms
+mii                    16384  1 r8169
+sdhci_acpi             16384  0
+video                  40960  1 i915
+sdhci                  45056  1 sdhci_acpi
+mmc_core              139264  3 rtsx_pci_sdmmc,sdhci,sdhci_acpi
+i2c_hid                20480  0

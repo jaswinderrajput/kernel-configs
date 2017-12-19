@@ -1,0 +1,99 @@
+Module                  Size  Used by
+fuse                  102400  3
+xt_CHECKSUM            16384  1
+ipt_MASQUERADE         16384  3
+nf_nat_masquerade_ipv4    16384  1 ipt_MASQUERADE
+tun                    32768  1
+nf_conntrack_netbios_ns    16384  1
+nf_conntrack_broadcast    16384  1 nf_conntrack_netbios_ns
+xt_CT                  16384  1
+ip6t_rpfilter          16384  1
+ip6t_REJECT            16384  2
+nf_reject_ipv6         16384  1 ip6t_REJECT
+xt_conntrack           16384  22
+ip_set                 36864  0
+nfnetlink              16384  1 ip_set
+ebtable_nat            16384  1
+ebtable_broute         16384  1
+bridge                143360  1 ebtable_broute
+ip6table_security      16384  1
+ip6table_mangle        16384  1
+ip6table_nat           16384  1
+nf_conntrack_ipv6      20480  12
+nf_defrag_ipv6         36864  1 nf_conntrack_ipv6
+nf_nat_ipv6            16384  1 ip6table_nat
+ip6table_raw           16384  1
+iptable_security       16384  1
+iptable_mangle         16384  1
+iptable_nat            16384  1
+nf_conntrack_ipv4      16384  16
+nf_defrag_ipv4         16384  1 nf_conntrack_ipv4
+nf_nat_ipv4            16384  1 iptable_nat
+nf_nat                 28672  3 nf_nat_ipv6,nf_nat_masquerade_ipv4,nf_nat_ipv4
+nf_conntrack          131072  11 nf_conntrack_ipv6,nf_conntrack_ipv4,ipt_MASQUERADE,nf_conntrack_broadcast,nf_conntrack_netbios_ns,xt_CT,nf_nat_ipv6,nf_nat_masquerade_ipv4,xt_conntrack,nf_nat_ipv4,nf_nat
+libcrc32c              16384  2 nf_conntrack,nf_nat
+iptable_raw            16384  1
+ebtable_filter         16384  1
+ebtables               32768  3 ebtable_filter,ebtable_nat,ebtable_broute
+ip6table_filter        16384  1
+ip6_tables             28672  5 ip6table_mangle,ip6table_filter,ip6table_security,ip6table_raw,ip6table_nat
+it87                   57344  0
+hwmon_vid              16384  1 it87
+vfat                   20480  2
+fat                    69632  1 vfat
+intel_rapl             20480  0
+x86_pkg_temp_thermal    16384  0
+intel_powerclamp       16384  0
+coretemp               16384  0
+kvm_intel             200704  0
+kvm                   598016  1 kvm_intel
+irqbypass              16384  1 kvm
+crct10dif_pclmul       16384  0
+crc32_pclmul           16384  0
+ghash_clmulni_intel    16384  0
+intel_cstate           20480  0
+intel_uncore          118784  0
+intel_rapl_perf        16384  0
+snd_hda_codec_hdmi     49152  1
+iTCO_wdt               16384  0
+iTCO_vendor_support    16384  1 iTCO_wdt
+i2c_i801               24576  0
+snd_hda_codec_realtek    90112  1
+snd_hda_codec_generic    73728  1 snd_hda_codec_realtek
+snd_hda_intel          40960  14
+snd_hda_codec         126976  4 snd_hda_intel,snd_hda_codec_hdmi,snd_hda_codec_generic,snd_hda_codec_realtek
+snd_hda_core           81920  5 snd_hda_intel,snd_hda_codec,snd_hda_codec_hdmi,snd_hda_codec_generic,snd_hda_codec_realtek
+snd_hwdep              16384  1 snd_hda_codec
+tpm_tis                16384  0
+tpm_tis_core           20480  1 tpm_tis
+tpm                    49152  2 tpm_tis,tpm_tis_core
+snd_seq                65536  0
+snd_seq_device         16384  1 snd_seq
+snd_pcm               102400  5 snd_hda_intel,snd_hda_codec,snd_hda_core,snd_hda_codec_hdmi
+snd_timer              32768  2 snd_seq,snd_pcm
+snd                    77824  37 snd_hda_intel,snd_hwdep,snd_seq,snd_hda_codec,snd_timer,snd_hda_codec_hdmi,snd_hda_codec_generic,snd_seq_device,snd_hda_codec_realtek,snd_pcm
+mei_me                 40960  0
+mei                   102400  1 mei_me
+lpc_ich                24576  0
+soundcore              16384  1 snd
+shpchp                 36864  0
+nfsd                  339968  1
+auth_rpcgss            61440  1 nfsd
+nfs_acl                16384  1 nfsd
+lockd                  90112  1 nfsd
+grace                  16384  2 nfsd,lockd
+sunrpc                335872  7 auth_rpcgss,nfsd,nfs_acl,lockd
+i915                 1490944  19
+i2c_algo_bit           16384  1 i915
+drm_kms_helper        151552  1 i915
+8021q                  32768  0
+drm                   348160  9 i915,drm_kms_helper
+garp                   16384  1 8021q
+stp                    16384  2 garp,bridge
+llc                    16384  3 garp,bridge,stp
+mrp                    20480  1 8021q
+serio_raw              16384  0
+crc32c_intel           24576  1
+r8169                  81920  0
+mii                    16384  1 r8169
+video                  40960  1 i915
